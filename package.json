@@ -1,7 +1,7 @@
 {
   "name": "postcss-tailwind-extra-directives",
-  "version": "0.0.0",
-  "description": "PostCSS plugin that adds directives for psuedo classses",
+  "version": "0.0.1",
+  "description": "Post CSS plugin for Tailwind CSS that adds directives for pseudo classes",
   "keywords": [
     "postcss",
     "css",
