@@ -40,11 +40,12 @@ yarn add -D postcss-tailwind-extra-directives
 
 ```diff
 module.exports = {
-  plugins: [
-+   require('postcss-tailwind-extra-directives'),
-    require('autoprefixer')
-  ]
-}
+  plugins: {
++   "postcss-tailwind-extra-directives": {},
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
 ```
 
 ## Features
