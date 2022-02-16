@@ -22,7 +22,7 @@ it("supports single directives", async () => {
 
 it("supports multiple directives", async () => {
   await run(
-    "@dark@hover bg-red-200 text-blue-400;",
+    "@dark:hover bg-red-200 text-blue-400;",
     "@apply hover:dark:bg-red-200 hover:dark:text-blue-400;",
     {
       rules: ["dark", "hover"],
@@ -32,7 +32,7 @@ it("supports multiple directives", async () => {
 
 it("supports triple directives", async () => {
   await run(
-    "@dark@hover@active bg-red-200 text-blue-400;",
+    "@dark:hover:active bg-red-200 text-blue-400;",
     "@apply active:hover:dark:bg-red-200 active:hover:dark:text-blue-400;",
     {
       rules: ["dark", "hover", "active"],
@@ -48,7 +48,7 @@ it("don't parse invalid rules", async () => {
 
 it("supports a sheet", async () => {
   await run(
-    "@dark@hover@active bg-red-200 text-blue-400; @dark bg-red-200;",
+    "@dark:hover:active bg-red-200 text-blue-400; @dark bg-red-200;",
     "@apply active:hover:dark:bg-red-200 active:hover:dark:text-blue-400; @apply dark:bg-red-200;",
     {
       rules: ["dark", "hover", "active"],

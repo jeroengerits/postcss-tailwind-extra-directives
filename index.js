@@ -58,8 +58,8 @@ module.exports = (opts = { opts: { rules: [] } }) => {
   return {
     postcssPlugin: "postcss-tailwind-extra-directives",
     AtRule(rule) {
-      if (rule.name.includes("@")) {
-        rule.name.split("@").map((name) => {
+      if (rule.name.includes(":")) {
+        rule.name.split(":").map((name) => {
           if (options.atRules.includes(name)) {
             rule.params = rule.params
               .split(" ")
