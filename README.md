@@ -55,14 +55,15 @@ Combine directives by using the `:` operator.
 
 ```css
 .myClass {
-    @dark:hover:active bg-gray-800 text-gray-200;
+  @dark:hover:active bg-gray-800 text-gray-200;
 }
 ```
 
 Outputs:
+
 ```css
 .myClass {
-    @apply dark:hover:active:bg-gray-800 dark:hover:active:text-gray-200;
+  @apply dark:hover:active:bg-gray-800 dark:hover:active:text-gray-200;
 }
 ```
 
